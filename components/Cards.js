@@ -54,12 +54,12 @@ const article = (content) => {
 
   // text content
   headline.textContent = content.headline;
-  imgSrc.textContent = content.authorPhoto;
-  authorName.textContent = content.authorName;
+  imgSrc.src = content.authorPhoto;
+  authorName.textContent = `By ${content.authorName}`;
 
   // append
   cardContainer.append(headline, author);
-  author.appendChild(imgContainer, authorName);
+  author.append(imgContainer, authorName);
   imgContainer.appendChild(imgSrc);
 
   // event listener
