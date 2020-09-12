@@ -34,6 +34,9 @@ axios
         cards.appendChild(article(content));
       });
     });
+  })
+  .catch((error) => {
+    alert("I am sorry, there was an error!", error);
   });
 
 const article = (content) => {
