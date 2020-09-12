@@ -16,9 +16,10 @@ const topicsContainer = document.querySelector(".topics");
 axios
   .get("https://lambda-times-api.herokuapp.com/topics")
   .then((succesfulData) => {
-    console.log(succesfulData);
+    // console.log(succesfulData);
     succesfulData.data.topics.forEach((title) => {
       // creating elements
+      //   console.log("data topics", succesfulData.data.topics);
       let topicDiv = document.createElement("div");
       topicDiv.classList.add("tab");
       topicDiv.textContent = title;
