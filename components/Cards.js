@@ -30,7 +30,9 @@ axios
     console.log("is this working", cardArray);
     cardArray.forEach((language) => {
       console.log("content", language);
-      cards.appendChild();
+      language.forEach((content) => {
+        cards.appendChild(article(content));
+      });
     });
   });
 
@@ -52,7 +54,7 @@ const article = (content) => {
 
   // text content
   headline.textContent = content.headline;
-  imgSrc.textContent = content.imgSrc;
+  imgSrc.textContent = content.authorPhoto;
   authorName.textContent = content.authorName;
 
   // append
