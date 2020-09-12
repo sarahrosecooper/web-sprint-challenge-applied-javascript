@@ -28,4 +28,7 @@ axios
     console.log(succesfulData);
     const cardArray = Object.values(succesfulData.data.articles);
     console.log("is this working", cardArray);
+    cardArray.forEach((language) => {
+      console.log("content", language);
+    });
   });

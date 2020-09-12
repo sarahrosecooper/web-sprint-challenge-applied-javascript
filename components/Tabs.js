@@ -25,4 +25,7 @@ axios
       topicDiv.textContent = title;
       topicsContainer.appendChild(topicDiv);
     });
+  })
+  .catch((error) => {
+    console.log(error);
   });
