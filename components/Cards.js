@@ -30,5 +30,40 @@ axios
     console.log("is this working", cardArray);
     cardArray.forEach((language) => {
       console.log("content", language);
+      cards.appendChild();
     });
   });
+
+const article = (content) => {
+  // creating the elements
+  const cardContainer = document.createElement("div");
+  const headline = document.createElement("div");
+  const author = document.createElement("div");
+  const imgContainer = document.createElement("div");
+  const imgSrc = document.createElement("img");
+  const authorName = document.createElement("span");
+
+  // class lists
+
+  cardContainer.classList.add("card");
+  headline.classList.add("headline");
+  author.classList.add("author");
+  imgContainer.classList.add("img-container");
+
+  // text content
+  headline.textContent = content.headline;
+  imgSrc.textContent = content.imgSrc;
+  authorName.textContent = content.authorName;
+
+  // append
+  cardContainer.append(headline, author);
+  author.appendChild(imgContainer, authorName);
+  imgContainer.appendChild(imgSrc);
+
+  // event listener
+  cardContainer.addEventListener("click", () => {
+    console.log(headline.textContent);
+  });
+
+  return cardContainer;
+};
